@@ -7,9 +7,10 @@ public enum LoginPageSelectors {
 
     LOGIN("button");
 
-    public String selector;
 
-    private LoginPageSelectors(String selector) {
+    public final String selector;
+
+    LoginPageSelectors(String selector) {
         this.selector = selector;
     }
 }

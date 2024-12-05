@@ -2,7 +2,6 @@ package test.base;
 
 import Common.CommonActions;
 import Common.UrlList;
-import Pages.BasePage;
 import Pages.LoginPage;
 import Pages.MainPage;
 import org.openqa.selenium.WebDriver;

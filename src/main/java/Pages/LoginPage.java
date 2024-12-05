@@ -1,6 +1,7 @@
 package Pages;
 
 import Common.selectors.LoginPageSelectors;
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -13,6 +14,8 @@ public class LoginPage {
         this.driver = driver;
     }
 
+
+    @Step("Log in to the application")
     public void login() {
         WebElement usernameField = driver.findElement(By.cssSelector(LoginPageSelectors.USERNAME_FIELD.selector));
         usernameField.sendKeys("Oleg");

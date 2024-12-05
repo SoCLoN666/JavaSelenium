@@ -1,6 +1,7 @@
 package Pages;
 
 import Common.UrlList;
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -15,6 +16,7 @@ public class BasePage {
         this.driver = driver;
     }
 
+    @Step("Open the Recipes Page")
     public void open(UrlList pageUrl) {
         driver.get(pageUrl.url);
     }

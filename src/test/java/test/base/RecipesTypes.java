@@ -2,6 +2,7 @@ package test.base;
 
 import Common.CommonActions;
 import Common.UrlList;
+import Common.Waiters;
 import Common.selectors.SidebarSelectors;
 import Pages.LoginPage;
 import Pages.MainPage;
@@ -20,6 +21,8 @@ public class RecipesTypes {
     protected LoginPage loginPage = new LoginPage(driver);
 
     protected MainPage mainPage = new MainPage(driver);
+
+    protected Waiters waiters = new Waiters(driver);
 
     @DataProvider(name = "recipeTypeData")
     public Object [][] createData() {
@@ -44,9 +47,11 @@ public class RecipesTypes {
         WebElement recipyTypeBtn = driver.findElement(By.id(recipeTypeBtnSelector));
         recipyTypeBtn.click();
 
+        waiters.waitForUrl(expectedUrl);
+
         String url = driver.getCurrentUrl();
 
-        Assert.assertTrue(url.contains(expectedUrl));
+        Assert.assertTrue(url.contains((expectedUrl)));
     }
 
     @AfterClass
