@@ -15,5 +15,7 @@ public class Waiters {
     public void waitForUrl(String url) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.urlContains(url));
+
+        //test
     }
 }
